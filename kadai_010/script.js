@@ -85,7 +85,7 @@ $('#submit').on('click', (event)=>{
     });
 
 // お問い合わせフォームの入力チェック
-inputCheck (()=> {
+const inputCheck = ()=> {
     /*console.log('inputCheck関数の呼び出し');
 });*/
 
@@ -154,7 +154,7 @@ inputCheck (()=> {
                 }
 
         // 都道府県のチェック
-        if($('prefecture').val() == ''){
+        if($('#prefecture').val() == '' ){
         //　エラーあり
         $('#prefecture').css('background-color', '#f79999');
         error = true;
@@ -163,7 +163,6 @@ inputCheck (()=> {
         //　エラーなし
         $('#prefecture').css('background-color', '#fafafa');
         }
-
 
                 // 個人情報のチェックボックスのチェック
                 if($('#agree').prop('checked')== false){
@@ -186,7 +185,6 @@ inputCheck (()=> {
 
                 // 戻り値としてエラーがあるかどうかを返す
                 return result;
-            });
+            };
         });
-    
     
